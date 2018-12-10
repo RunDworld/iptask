@@ -1,17 +1,17 @@
 var express = require("express");
 var app = express();
-
+var request = require("request");
 var getIp = require('ipware')().get_ip;
 var ip;
 
 
-app.get('/',function(req,res){
+app.get('/',function(req,resq){
 	ip = getIp(req)
 	console.log(ip);
 	url = ""
-	app.get("http://ip-api.com/json/"+ip+"?fields=country,countryCode,region,regionName,city,zip,lat,lon,timezone",function(data){
-		console.log("1->",data);
-		res.send(data);
+	request.get("http://ip-api.com/json/"+ip+"?fields=country,countryCode,region,regionName,city,zip,lat,lon,timezone",function(err,res,body){
+		console.log("1->",body);
+		resq.send(body);
 
 
 	});
