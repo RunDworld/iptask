@@ -9,6 +9,7 @@
   "author": "Vinit",
   "license": "ISC",
   "dependencies": {
+    "ajax-request": "^1.2.3",
     "express": "^4.16.4",
     "http": "0.0.0",
     "ipware": "^1.0.0",
