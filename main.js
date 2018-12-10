@@ -18,6 +18,6 @@ app.get('/',function(req,resq){
 
 
 
-app.listen(3000,function(){
+app.listen(port,function(){
 	console.log("Listening to port + ",process.env.port);
 });
