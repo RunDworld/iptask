@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express();
+var port = process.env.PORT || 8000;
 var request = require("request");
 var getIp = require('ipware')().get_ip;
 var ip;
@@ -23,6 +24,6 @@ app.get('/',function(req,resq){
 
 
 
-app.listen(3000,function(){
-	console.log("Listening");
+app.listen(port,function(){
+	console.log("Listening to port + ",process.env.PORT);
 });
